@@ -105,123 +105,180 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
--- Paste Question 1 here
+<img width="1227" height="345" alt="image" src="https://github.com/user-attachments/assets/5c581f70-6e2d-4f86-80c8-16f394f2d23c" />
+```
 
-```sql
--- Paste your SQL code below for Question 1
+```
+ALTER TABLE employee
+ADD COLUMN designation varchar(50);
+
 ```
 
 **Output:**
 
-![Output1](output.png)
+<img width="1230" height="305" alt="Screenshot 2026-08-10 182445" src="https://github.com/user-attachments/assets/bd7de382-b653-47bf-ada5-60645ef83017" />
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+<img width="1235" height="540" alt="Screenshot 2026-08-10 182627" src="https://github.com/user-attachments/assets/87423811-d596-4e8a-b1e5-5e62b1667e68" />
 
 ```sql
--- Paste your SQL code below for Question 2
+INSERT INTO Student_details (RollNo,Name,Gender,Subject,MARKS) VALUES (205,"Olivia Green","F",NULL,NULL),(207,"Liam Smith","M","Mathematic",85),(208,"Sophia Johns","F","Science",NULL);
 ```
 
 **Output:**
 
-![Output2](output.png)
+<img width="1237" height="322" alt="Screenshot 2026-08-10 182729" src="https://github.com/user-attachments/assets/96a14840-8bd4-420f-8627-e9ffe9edca32" />
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+<img width="1235" height="427" alt="Screenshot 2026-08-10 182753" src="https://github.com/user-attachments/assets/7226c653-5fea-4cbe-bdf5-7978ed7518e5" />
+
 
 ```sql
--- Paste your SQL code below for Question 3
+CREATE TABLE Invoices(
+InvoiceID INTEGER PRIMARY KEY,
+InvoiceDate Date,
+DueDate DATE CHECK(DueDate>InvoiceDate),
+Amount REAL check(Amount>0));
+
 ```
 
 **Output:**
 
-![Output3](output.png)
+<img width="1226" height="300" alt="image" src="https://github.com/user-attachments/assets/1dfb0689-833b-4a51-aa42-d9d2cc95e4cf" />
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+<img width="1238" height="418" alt="Screenshot 2026-08-10 182952" src="https://github.com/user-attachments/assets/204c7c88-966b-4ae5-b7ac-8dd63178bded" />
+
 
 ```sql
--- Paste your SQL code below for Question 4
+INSERT INTO Products SELECT * FROM Discontinued_products;
 ```
 
 **Output:**
+<img width="1241" height="305" alt="Screenshot 2026-08-10 183017" src="https://github.com/user-attachments/assets/4c14ae8a-2151-4dd6-9136-30ecc84af733" />
 
-![Output4](output.png)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+<img width="1252" height="506" alt="image" src="https://github.com/user-attachments/assets/e0fe2c50-75d7-4dee-a123-da03942c3cf8" />
+
 
 ```sql
--- Paste your SQL code below for Question 5
+CREATE TABLE Employees(
+EmployeeID INTEGER,
+FirstName TEXT,
+LastName TEXT,
+HireDate DATE);
+
 ```
 
 **Output:**
+<img width="1240" height="337" alt="image" src="https://github.com/user-attachments/assets/9332dae2-5714-40b3-a35b-65881a0d033c" />
 
-![Output5](output.png)
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+<img width="1235" height="392" alt="image" src="https://github.com/user-attachments/assets/5c5ef5cc-a7da-44de-924e-b9e82a40d843" />
+
 
 ```sql
--- Paste your SQL code below for Question 6
+CREATE TABLE Bonuses(
+BonusID INTEGER PRIMARY KEY,
+EmployeeID INTEGER,
+BonusAmount REAL CHECK(BonusAmount>0),
+BonusDate DATE,
+Reason TEXT NOT NULL,
+FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID));
 ```
 
 **Output:**
 
-![Output6](output.png)
+<img width="1240" height="337" alt="Screenshot 2026-08-10 183142" src="https://github.com/user-attachments/assets/ed8866b9-0a18-4b1d-8202-058320371854" />
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+<img width="1252" height="506" alt="Screenshot 2026-08-10 183111" src="https://github.com/user-attachments/assets/9998d262-e335-40f8-a940-cd2496bb0b15" />
+
 
 ```sql
--- Paste your SQL code below for Question 7
+create table ProjectAssignments(
+    AssignmentID integer primary key,
+    EmployeeID integer,
+    ProjectID integer,
+    AssignmentDate date NOT NULL,
+    foreign key (EmployeeID) references Employees(EmployeeID),
+    foreign key (ProjectID) references Projects(ProjectID)
+);
 ```
 
 **Output:**
+<img width="1240" height="337" alt="Screenshot 2026-08-10 183142" src="https://github.com/user-attachments/assets/495cfa3c-ff1e-4e84-8688-a40ebbdf449b" />
 
-![Output7](output.png)
 
 **Question 8**
 ---
--- Paste Question 8 here
+<img width="1227" height="642" alt="image" src="https://github.com/user-attachments/assets/73df7348-66b6-4020-bf10-cbc0c3e7885c" />
+
 
 ```sql
--- Paste your SQL code below for Question 8
+alter table customer
+add column email VARCHAR(100) 
 ```
 
 **Output:**
+<img width="1240" height="337" alt="Screenshot 2026-08-10 183142" src="https://github.com/user-attachments/assets/0988070f-5dd2-4590-aefb-df2c6c585861" />
 
-![Output8](output.png)
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+<img width="1237" height="495" alt="image" src="https://github.com/user-attachments/assets/92cd0393-8052-4b1c-b41b-906f81345dc0" />
+
 
 ```sql
--- Paste your SQL code below for Question 9
+insert into Customers (CustomerID,Name,Address)
+values (304,"Peter Parker","Spider St");
 ```
 
 **Output:**
 
-![Output9](output.png)
+<img width="1241" height="322" alt="image" src="https://github.com/user-attachments/assets/83cc861b-3dfb-43c2-b02b-fa03a42326fc" />
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+<img width="1252" height="506" alt="Screenshot 2026-08-10 183111" src="https://github.com/user-attachments/assets/b5058eb2-fbe8-4c35-80c9-11e3e58e308a" />
+
 
 ```sql
--- Paste your SQL code below for Question 10
+create table Employees(
+    EmployeeID integer primary key,
+    FirstName varchar(50) not null,
+    LastName varchar(50) not null,
+    Email varchar(50) UNIQUE,
+    Salary integer check(Salary>0),
+    DepartmentID integer,
+    foreign key (DepartmentID) references Departments(DepartmentID)
+);
 ```
 
 **Output:**
 
-![Output10](output.png)
+<img width="1240" height="337" alt="Screenshot 2026-08-10 183142" src="https://github.com/user-attachments/assets/4bf97dfd-95bb-4bf1-9c63-8485ac479b82" />
+
+
+**MODULE-1 SEB:**
+<img width="1887" height="852" alt="Screenshot 2026-08-10 184040" src="https://github.com/user-attachments/assets/b658b3f0-c2ae-4051-8fbc-fa5ea090b079" />
+
 
 
 ## RESULT
