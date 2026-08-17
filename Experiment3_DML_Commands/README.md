@@ -194,7 +194,9 @@ where CUST_COUNTRY='India' and CUST_CITY !='Chennai';
 **Output:**
 <img width="1452" height="845" alt="image" src="https://github.com/user-attachments/assets/e4ff42cd-6025-47c5-9e02-9783a5d976e0" />
 
-**SEB**
+** MODULE-2 SEB**
+<img width="1918" height="528" alt="image" src="https://github.com/user-attachments/assets/73a636d1-90af-4274-b6a5-d7ccc7ea749f" />
+
 
 
 ## RESULT
